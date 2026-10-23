@@ -30,7 +30,7 @@ $('#yr').textContent = new Date().getFullYear();
 $('.bar').querySelectorAll('a').forEach(a => a.insertAdjacentHTML('afterbegin', icon(a.dataset.i === 'cal' ? 'cal' : a.dataset.i)));
 
 // Fungsi utama & alur (statis)
-const fungsi = [['plan','Perencanaan dan Pelaksanaan Kegiatan','Menyusun rencana teknis dan mengoordinasikan pelaksanaan kegiatan.'],['box','Logistik dan Teknis Lapangan','Mengelola perlengkapan, sarana, dan kebutuhan teknis di lapangan.'],['safe','Keselamatan dan Keamanan Kegiatan','Menerapkan prosedur keselamatan dan penanganan keadaan darurat.'],['doc','Penyusunan SOP dan Petunjuk Teknis','Menyusun dan memperbarui SOP serta juknis kegiatan.']];
+const fungsi = [['users','Pembinaan Anggota dan Pembina','Membina anggota, pembina, dan pelatih agar kompeten dan berakhlak.'],['map','Koordinasi Kwartir Cabang dan Qabilah','Menghubungkan dan mendampingi satuan organisasi di seluruh wilayah.'],['tent','Penyelenggaraan Kegiatan Kepanduan','Merencanakan dan melaksanakan kegiatan kepanduan secara aman dan tertib.'],['doc','Administrasi dan Kelembagaan','Menjaga tertib administrasi, data, dan ketentuan organisasi.']];
 $('#fungsi').innerHTML = fungsi.map(f => `<article class="card"><div class="ic">${icon(f[0])}</div><h3>${f[1]}</h3><p>${f[2]}</p></article>`).join('');
 const alur = [['Pemetaan Kebutuhan','Mengidentifikasi kebutuhan kegiatan dan kondisi lapangan.'],['Perencanaan dan Koordinasi','Menyusun rencana dan berkoordinasi dengan Kwartir Cabang.'],['Persiapan Teknis dan Logistik','Menyiapkan perlengkapan, lokasi, dan panitia.'],['Pelaksanaan dan Pengawasan','Menjalankan kegiatan dengan pengawasan keselamatan.'],['Evaluasi dan Pelaporan','Mengevaluasi hasil dan menyusun laporan.']];
 $('#flow').innerHTML = alur.map((a, i) => `<li data-n="${i + 1}"><h3>${a[0]}</h3><p>${a[1]}</p></li>`).join('');
@@ -99,7 +99,7 @@ $('#lbX').onclick = closeLb; lb.onclick = e => { if (e.target === lb) closeLb();
   const s = await load('site.json');
   if (s._err) { ['#stats', '#team', '#contactList'].forEach(i => fail($(i), 'situs')); return; }
   $('#stats').innerHTML = s.stats.map(x => x.value == null ? `<div class="stat na"><b>Data sedang disiapkan</b><span>${esc(x.label)}</span></div>` : `<div class="stat"><b>${esc(x.value)}${esc(x.suffix || '')}</b><span>${esc(x.label)}</span></div>`).join('');
-  $('#team').innerHTML = s.team.length ? s.team.map(t => `<article class="card"><div class="ic">${icon('users')}</div><h3>${esc(t.nama)}</h3><p>${esc(t.jabatan)}${t.tugas ? '<br>' + esc(t.tugas) : ''}</p></article>`).join('') : '<p class="empty">Susunan pengurus akan ditampilkan setelah data terverifikasi. Profil bidang tersedia pada bagian Profil.</p>';
+  $('#team').innerHTML = s.team.length ? s.team.map(t => `<article class="card"><div class="ic">${icon('users')}</div><h3>${esc(t.nama)}</h3><p>${esc(t.jabatan)}${t.tugas ? '<br>' + esc(t.tugas) : ''}</p></article>`).join('') : '<p class="empty">Susunan pengurus Kwartir Daerah akan ditampilkan setelah data terverifikasi.</p>';
   const c = s.contact, wa = (c.whatsapp || '').replace(/\D/g, '');
   const rows = [['Email', c.email, c.email && `mailto:${c.email}`], ['WhatsApp', c.whatsapp, wa && `https://wa.me/${wa}`], ['Instagram', c.instagram, c.instagram], ['Sekretariat', c.alamat, '']];
   $('#contactList').innerHTML = rows.map(r => `<li><b>${r[0]}</b>${r[1] ? (r[2] ? `<a href="${esc(r[2])}" target="_blank" rel="noopener">${esc(r[1])}</a>` : esc(r[1])) : 'Belum tersedia'}</li>`).join('');
