@@ -1,10 +1,58 @@
 [
- {"nama":"Penyusunan Kalender Kegiatan Operasional","kategori":"Perencanaan","icon":"cal","deskripsi":"Menyusun jadwal kegiatan operasional Kwarda dalam satu kalender bersama.","status":"Belum dikonfirmasi"},
- {"nama":"Standardisasi SOP Kegiatan Kepanduan","kategori":"Keselamatan","icon":"doc","deskripsi":"Menyeragamkan prosedur pelaksanaan kegiatan di seluruh tingkatan.","status":"Belum dikonfirmasi"},
- {"nama":"Inventarisasi Perlengkapan Kepanduan","kategori":"Teknis Lapangan","icon":"box","deskripsi":"Mendata perlengkapan kegiatan beserta kondisi dan lokasinya.","status":"Belum dikonfirmasi"},
- {"nama":"Penyusunan Juknis Perkemahan","kategori":"Perencanaan","icon":"tent","deskripsi":"Menyusun petunjuk teknis perkemahan, dari persiapan sampai penutupan.","status":"Belum dikonfirmasi"},
- {"nama":"Pelatihan Keterampilan Lapangan","kategori":"Teknis Lapangan","icon":"flag","deskripsi":"Melatih keterampilan lapangan seperti tali-temali, navigasi, dan kemah.","status":"Belum dikonfirmasi"},
- {"nama":"Simulasi Keselamatan Kegiatan","kategori":"Keselamatan","icon":"safe","deskripsi":"Latihan penanganan keadaan darurat dan evakuasi bagi panitia dan pembina.","status":"Belum dikonfirmasi"},
- {"nama":"Pendampingan Operasional Kwartir Cabang","kategori":"Teknis Lapangan","icon":"users","deskripsi":"Mendampingi Kwartir Cabang dalam kebutuhan teknis penyelenggaraan kegiatan.","status":"Belum dikonfirmasi"},
- {"nama":"Evaluasi dan Dokumentasi Operasional","kategori":"Evaluasi","icon":"chart","deskripsi":"Mengevaluasi kegiatan dan mendokumentasikan laporan operasional.","status":"Belum dikonfirmasi"}
+ {
+  "nama": "Pembinaan Pembina dan Pelatih",
+  "kategori": "Pembinaan",
+  "icon": "users",
+  "deskripsi": "Pelatihan dan pengembangan kompetensi pembina serta pelatih.",
+  "status": "Belum dikonfirmasi"
+ },
+ {
+  "nama": "Pembinaan Anggota",
+  "kategori": "Pembinaan",
+  "icon": "flag",
+  "deskripsi": "Pembinaan karakter dan keterampilan anggota di setiap golongan.",
+  "status": "Belum dikonfirmasi"
+ },
+ {
+  "nama": "Kalender Kegiatan Kwarda",
+  "kategori": "Operasional",
+  "icon": "cal",
+  "deskripsi": "Menyusun jadwal kegiatan Kwarda dalam satu kalender bersama.",
+  "status": "Belum dikonfirmasi"
+ },
+ {
+  "nama": "Perkemahan dan Kegiatan Lapangan",
+  "kategori": "Operasional",
+  "icon": "tent",
+  "deskripsi": "Penyelenggaraan perkemahan dan kegiatan lapangan secara aman.",
+  "status": "Belum dikonfirmasi"
+ },
+ {
+  "nama": "Standardisasi SOP dan Juknis",
+  "kategori": "Operasional",
+  "icon": "doc",
+  "deskripsi": "Menyusun dan menyeragamkan SOP serta petunjuk teknis kegiatan.",
+  "status": "Belum dikonfirmasi"
+ },
+ {
+  "nama": "Pendampingan Kwartir Cabang dan Qabilah",
+  "kategori": "Organisasi",
+  "icon": "map",
+  "deskripsi": "Pendampingan administrasi dan kegiatan bagi satuan di bawah Kwarda.",
+  "status": "Belum dikonfirmasi"
+ },
+ {
+  "nama": "Tertib Administrasi dan Data Keanggotaan",
+  "kategori": "Organisasi",
+  "icon": "box",
+  "deskripsi": "Penataan administrasi dan pendataan keanggotaan secara tertib.",
+  "status": "Belum dikonfirmasi"
+ },
+ {
+  "nama": "Evaluasi dan Pelaporan",
+  "kategori": "Evaluasi",
+  "icon": "chart",
+  "deskripsi": "Evaluasi kegiatan dan penyusunan laporan program kerja.",
+  "status": "Belum dikonfirmasi"
+ }
 ]
