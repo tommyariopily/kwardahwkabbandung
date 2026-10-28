@@ -95,3 +95,5 @@ dl{margin:1rem 0 0}dt{font-weight:700;font-size:.8rem;color:var(--mut)}dd{margin
  .filters{max-width:480px}.gal{grid-template-columns:repeat(4,1fr)}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+.news{overflow:hidden}
+.nimg{display:block;max-width:none;width:calc(100% + 2.2rem);margin:-1.1rem -1.1rem .4rem;aspect-ratio:3/2;object-fit:cover}
