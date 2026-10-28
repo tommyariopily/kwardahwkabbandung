@@ -43,8 +43,19 @@ $('#shX').onclick = closeSheet; sh.onclick = e => { if (e.target === sh) closeSh
 (async () => {
   const el = $('#newsList'), d = await load('news.json');
   if (d._err) return fail(el, 'pengumuman');
-  const l = [...d].sort((a, b) => b.tanggal.localeCompare(a.tanggal)).slice(0, 6);
-    el.innerHTML = l.map(n => `<article class="card news">${n.foto ? `<img class="nimg" src="${esc(n.foto)}" alt="${esc(n.alt || n.judul)}" loading="lazy" width="600" height="400">` : ''}<span class="badge">${esc(n.kategori || 'Pengumuman')}</span><h3>${esc(n.judul)}</h3><p>${esc(new Date(n.tanggal).toLocaleDateString('id-ID', { dateStyle: 'long' }))}<br>${esc(n.ringkasan)}</p>${n.url ? `<a class="btn sm" href="${esc(n.url)}" target="_blank" rel="noopener">Baca selengkapnya</a>` : ''}</article>`).join('') || '<p class="empty">Belum ada pengumuman resmi. Pengumuman akan dipublikasikan di sini.</p>';
+  const slug = n => 'berita-' + (n.tanggal + '-' + n.judul).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+  const l = [...(Array.isArray(d) ? d : [d])].sort((a, b) => b.tanggal.localeCompare(a.tanggal)).slice(0, 6);
+  el.innerHTML = l.map(n => `<article class="card news" id="${slug(n)}">${n.foto ? `<img class="nimg" src="${esc(n.foto)}" alt="${esc(n.alt || n.judul)}" loading="lazy" width="600" height="400">` : ''}<span class="badge">${esc(n.kategori || 'Pengumuman')}</span><h3>${esc(n.judul)}</h3><p>${esc(new Date(n.tanggal).toLocaleDateString('id-ID', { dateStyle: 'long' }))}<br>${esc(n.ringkasan)}</p><div class="act">${n.url ? `<a class="btn sm" href="${esc(n.url)}" target="_blank" rel="noopener">Baca selengkapnya</a>` : ''}<button class="btn sm share" data-share="${slug(n)}">Bagikan</button></div></article>`).join('') || '<p class="empty">Belum ada pengumuman resmi. Pengumuman akan dipublikasikan di sini.</p>';
+  el.onclick = e => {
+    const b = e.target.closest('[data-share]'); if (!b) return;
+    const n = l.find(x => slug(x) === b.dataset.share);
+    const u = location.origin + location.pathname + '#' + b.dataset.share;
+    if (navigator.share) navigator.share({ title: n.judul, text: n.judul, url: u }).catch(() => {});
+    else if (navigator.clipboard) navigator.clipboard.writeText(u).then(() => toast('Tautan berita disalin.'), () => toast(u));
+    else toast(u);
+  };
+  const t = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+  if (t) setTimeout(() => { t.scrollIntoView({ block: 'center' }); t.classList.add('hl'); }, 150);
 })();
 
 // Program + filter
