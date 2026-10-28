@@ -44,7 +44,7 @@ $('#shX').onclick = closeSheet; sh.onclick = e => { if (e.target === sh) closeSh
   const el = $('#newsList'), d = await load('news.json');
   if (d._err) return fail(el, 'pengumuman');
   const l = [...d].sort((a, b) => b.tanggal.localeCompare(a.tanggal)).slice(0, 6);
-  el.innerHTML = l.map(n => `<article class="card"><span class="badge">${esc(n.kategori || 'Pengumuman')}</span><h3>${esc(n.judul)}</h3><p>${esc(new Date(n.tanggal).toLocaleDateString('id-ID', { dateStyle: 'long' }))}<br>${esc(n.ringkasan)}</p>${n.url ? `<a class="btn sm" href="${esc(n.url)}" target="_blank" rel="noopener">Baca selengkapnya</a>` : ''}</article>`).join('') || '<p class="empty">Belum ada pengumuman resmi. Pengumuman akan dipublikasikan di sini.</p>';
+    el.innerHTML = l.map(n => `<article class="card news">${n.foto ? `<img class="nimg" src="${esc(n.foto)}" alt="${esc(n.alt || n.judul)}" loading="lazy" width="600" height="400">` : ''}<span class="badge">${esc(n.kategori || 'Pengumuman')}</span><h3>${esc(n.judul)}</h3><p>${esc(new Date(n.tanggal).toLocaleDateString('id-ID', { dateStyle: 'long' }))}<br>${esc(n.ringkasan)}</p>${n.url ? `<a class="btn sm" href="${esc(n.url)}" target="_blank" rel="noopener">Baca selengkapnya</a>` : ''}</article>`).join('') || '<p class="empty">Belum ada pengumuman resmi. Pengumuman akan dipublikasikan di sini.</p>';
 })();
 
 // Program + filter
