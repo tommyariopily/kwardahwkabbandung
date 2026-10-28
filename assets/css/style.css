@@ -100,3 +100,5 @@ dl{margin:1rem 0 0}dt{font-weight:700;font-size:.8rem;color:var(--mut)}dd{margin
 .act{display:grid;gap:.5rem;margin-top:.25rem}
 .btn.sm.share{background:#fff;color:var(--g);border-color:var(--g)}
 .card.hl{outline:3px solid var(--au);outline-offset:2px}
+.news{overflow:hidden}
+.nimg{display:block;max-width:none;width:calc(100% + 2.2rem);margin:-1.1rem -1.1rem .4rem;aspect-ratio:3/2;object-fit:cover}
