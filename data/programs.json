@@ -4,55 +4,87 @@
   "kategori": "Pembinaan",
   "icon": "users",
   "deskripsi": "Pelatihan dan pengembangan kompetensi pembina serta pelatih.",
-  "status": "Belum dikonfirmasi"
+  "status": "Belum dikonfirmasi",
+  "tujuan": "",
+  "sasaran": "",
+  "jadwal": "",
+  "penanggung_jawab": ""
  },
  {
   "nama": "Pembinaan Anggota",
   "kategori": "Pembinaan",
   "icon": "flag",
   "deskripsi": "Pembinaan karakter dan keterampilan anggota di setiap golongan.",
-  "status": "Belum dikonfirmasi"
+  "status": "Belum dikonfirmasi",
+  "tujuan": "",
+  "sasaran": "",
+  "jadwal": "",
+  "penanggung_jawab": ""
  },
  {
   "nama": "Kalender Kegiatan Kwarda",
   "kategori": "Operasional",
   "icon": "cal",
   "deskripsi": "Menyusun jadwal kegiatan Kwarda dalam satu kalender bersama.",
-  "status": "Belum dikonfirmasi"
+  "status": "Belum dikonfirmasi",
+  "tujuan": "",
+  "sasaran": "",
+  "jadwal": "",
+  "penanggung_jawab": ""
  },
  {
   "nama": "Perkemahan dan Kegiatan Lapangan",
   "kategori": "Operasional",
   "icon": "tent",
   "deskripsi": "Penyelenggaraan perkemahan dan kegiatan lapangan secara aman.",
-  "status": "Belum dikonfirmasi"
+  "status": "Belum dikonfirmasi",
+  "tujuan": "",
+  "sasaran": "",
+  "jadwal": "",
+  "penanggung_jawab": ""
  },
  {
   "nama": "Standardisasi SOP dan Juknis",
   "kategori": "Operasional",
   "icon": "doc",
   "deskripsi": "Menyusun dan menyeragamkan SOP serta petunjuk teknis kegiatan.",
-  "status": "Belum dikonfirmasi"
+  "status": "Belum dikonfirmasi",
+  "tujuan": "",
+  "sasaran": "",
+  "jadwal": "",
+  "penanggung_jawab": ""
  },
  {
   "nama": "Pendampingan Kwartir Cabang dan Qabilah",
   "kategori": "Organisasi",
   "icon": "map",
   "deskripsi": "Pendampingan administrasi dan kegiatan bagi satuan di bawah Kwarda.",
-  "status": "Belum dikonfirmasi"
+  "status": "Belum dikonfirmasi",
+  "tujuan": "",
+  "sasaran": "",
+  "jadwal": "",
+  "penanggung_jawab": ""
  },
  {
   "nama": "Tertib Administrasi dan Data Keanggotaan",
   "kategori": "Organisasi",
   "icon": "box",
   "deskripsi": "Penataan administrasi dan pendataan keanggotaan secara tertib.",
-  "status": "Belum dikonfirmasi"
+  "status": "Belum dikonfirmasi",
+  "tujuan": "",
+  "sasaran": "",
+  "jadwal": "",
+  "penanggung_jawab": ""
  },
  {
   "nama": "Evaluasi dan Pelaporan",
   "kategori": "Evaluasi",
   "icon": "chart",
   "deskripsi": "Evaluasi kegiatan dan penyusunan laporan program kerja.",
-  "status": "Belum dikonfirmasi"
+  "status": "Belum dikonfirmasi",
+  "tujuan": "",
+  "sasaran": "",
+  "jadwal": "",
+  "penanggung_jawab": ""
  }
 ]
